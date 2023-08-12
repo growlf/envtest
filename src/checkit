@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Get the OS release values from the container
+. /etc/os-release
+
+# Spew the variables for validation
+printf "Release Tag  :${RELEASE_TAG}\n"
+printf "OS Version   :${VERSION}\n"
+printf "FOO          :${FOO}\n"
+printf "BAR          :${BAR}\n"
+
+# do stuff like a real application would.....
+# ...

@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+
+  tester:
+    image: ubuntu:latest
+    environment:
+      - BAR="from 'environment' in docker-compose.yml file"
+    env_file:
+      - named.env
+    command: "echo ${BAR}"

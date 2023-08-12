@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+
+  tester:
+    image: thenetyeti/envtest:${RELEASE_TAG:-latest}
+    build: ./src
+    environment:
+      - FOO="compose file"
+      - BAR="docker-compose.yml with $$FOO from '${FOO}'"
