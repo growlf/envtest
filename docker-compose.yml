@@ -8,5 +8,5 @@ services:
     environment:
       - FOO="compose file"
       - BAR="docker-compose.yml with $$FOO from '${FOO}'"
-    command: ["/usr/bin/echo", "${FOO:-not found}"]
-
+      - FILE="checkit.log"
+    command: ["/app/checkit", "${FILE}"]
