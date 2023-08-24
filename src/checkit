@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Get command line parameters
+FILE=${1:-default.log}
+
 # Get the OS release values from the container
 . /etc/os-release
 
@@ -8,6 +11,13 @@ printf "Release Tag  :${RELEASE_TAG}\n"
 printf "OS Version   :${VERSION}\n"
 printf "FOO          :${FOO}\n"
 printf "BAR          :${BAR}\n"
+printf "FILE         :${FILE}\n"
+
+echo "Release Tag  :${RELEASE_TAG}" >> ${FILE}
+echo "OS Version   :${VERSION}" >> ${FILE}
+echo "FOO          :${FOO}" >> ${FILE}
+echo "BAR          :${BAR}" >> ${FILE}
+echo "FILE         :${FILE}" >> ${FILE}
 
 # do stuff like a real application would.....
 # ...
