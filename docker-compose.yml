@@ -9,9 +9,8 @@ services:
       - FOO="compose file"
       - BAR="docker-compose.yml with $$FOO from '${FOO}'"
       - FILE="checkit.log"
-      - OS_PWD="${PWD}"
+      #- OS_PWD="${PWD}"
       - OS_HOSTNAME='hostname'
     volumes:
       - /:/host
-      - ${PWD}:/ospwd
     command: ["/app/checkit", "${FILE}"]
