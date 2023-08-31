@@ -12,12 +12,16 @@ printf "OS Version   :${VERSION}\n"
 printf "FOO          :${FOO}\n"
 printf "BAR          :${BAR}\n"
 printf "FILE         :${FILE}\n"
+printf "OS_PWD       :${OS_PWD}\n"
+printf "OS_HOSTNAME  :${OS_HOSTNAME}\n"
 
-echo "Release Tag  :${RELEASE_TAG}" >> ${FILE}
-echo "OS Version   :${VERSION}" >> ${FILE}
-echo "FOO          :${FOO}" >> ${FILE}
-echo "BAR          :${BAR}" >> ${FILE}
-echo "FILE         :${FILE}" >> ${FILE}
+echo "Release Tag   :${RELEASE_TAG}" >> ${FILE}
+echo "OS Version    :${VERSION}" >> ${FILE}
+echo "FOO           :${FOO}" >> ${FILE}
+echo "BAR           :${BAR}" >> ${FILE}
+echo "FILE          :${FILE}" >> ${FILE}
+printf "OS_PWD      :${OS_PWD}\n"
+printf "OS_HOSTNAME :${OS_HOSTNAME}\n"
 
 # do stuff like a real application would.....
 # ...
